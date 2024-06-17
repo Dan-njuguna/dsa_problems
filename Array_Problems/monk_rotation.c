@@ -10,12 +10,14 @@ int main(void)
 	int T, N, K, pos;
 	int *A, *A_new;
 
+	printf("Enter the number of times: ");
 	scanf("%d", &T);
 	if (T >= 1 && T <= 20)
 	{
 		j = 1;
 		while (j <= T)
 		{
+			printf("Enter the number of elements in each array: ");
 			scanf("%d %d", &N, &K);
 			if (N < 1 || N > 100000 || K < 0 || K > 1000000)
 			{
@@ -41,6 +43,7 @@ int main(void)
 			/* Taking all inputs for the array A.*/
 			for (i = 0; i < N; i++)
 			{
+				printf("Enter array elements: ");
 				scanf("%d", &A[i]);
 				if (A[i] < 0 || A[i] > 1000000)
 				{
