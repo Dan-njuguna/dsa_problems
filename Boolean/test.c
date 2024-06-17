@@ -3,11 +3,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-    // IMPORTING CUSTOM BOOLEAN LIBRARY
+// IMPORTING CUSTOM BOOLEAN LIBRARY
 #include "Boolean.c"
 
 // A FUNCTION TO TEST A NUMBER WITH BOOLEAN
-void testNumber(){
+void testNumber()
+{
     printf("<------Testing numbers------>\n");
     int number_value;
 
@@ -17,16 +18,15 @@ void testNumber(){
     Boolean_type* bool_number = Boolean_maker(&number_value, BOOLEAN_VALUE_TYPE_NON_ARRAY);
     printf("\n\t<---Testing value method--->\n");
 
-    printf(
-        "\t\t->Number stored: %d\n\t\t-> The number '%d' is '%s'\n",
-        *(int*)bool_number->value, number_value, bool_number->boolValue()
-    );
+    printf("\t\t->Number stored: %d\n\t\t-> The number '%d' is '%s'\n",
+        *(int*)bool_number->value, number_value, bool_number->boolValue());
 
     bool_number->clear();
 }
 
 // A FUNCTION TO TEST A CHARACTER WITH BOOLEAN
-void testCharacter(){
+void testCharacter()
+{
     printf("<------Testing characters------>\n");
     char character_value;
 
@@ -36,16 +36,15 @@ void testCharacter(){
     Boolean_type* bool_character = Boolean_maker(&character_value, BOOLEAN_VALUE_TYPE_NON_ARRAY);
     printf("\n\t<---Testing value method--->\n");
 
-    printf(
-        "\t\t-> Character stored: %c\n\t\t-> The character '%c' is '%s'\n",
-        *(char *)bool_character->value, character_value, bool_character->boolValue()
-    );
+    printf("\t\t-> Character stored: %c\n\t\t-> The character '%c' is '%s'\n",
+        *(char *)bool_character->value, character_value, bool_character->boolValue());
 
     bool_character->clear();
 }
 
 // A FUNCTION TO TEST A STRING WITH BOOLEAN FUNCTIONALITY
-void testString(){ 
+void testString()
+{ 
     printf("<------Testing strings------>\n");
     char string_value[100]; 
     char* actual_string;
@@ -59,16 +58,15 @@ void testString(){
     Boolean_type* bool_string = Boolean_maker(actual_string, BOOLEAN_VALUE_TYPE_NON_ARRAY);
     printf("\n\t<---Testing value method--->\n");
 
-    printf(
-        "\t\t-> String stored: %s\n\t\t-> The string '%s' is '%s'\n", 
-        (char*)bool_string->value, actual_string, bool_string->boolValue()
-    );
+    printf("\t\t-> String stored: %s\n\t\t-> The string '%s' is '%s'\n", 
+        (char*)bool_string->value, actual_string, bool_string->boolValue());
 
     bool_string->clear();
 }
 
-// A FUNCTION TO TEST ARRAYS
-void testArray(){
+/*A FUNCTION TO TEST ARRAYS*/
+void testArray()
+{
     printf("<------Testing arrays------>\n");
 
     char* strings_array[2] = {"hello", "hi"};
@@ -84,24 +82,18 @@ void testArray(){
     printf("\n\t<---Testing value method--->\n");
 
     printf("\t\t<-Right strings array->\n");
-    printf(
-        "\t\t\t-> Value of 1st element stored stored: %s\n\t\t\t-> The value '%s' is '%s'\n", 
-        *(char**)bool_strings->value, strings_array[0], bool_strings->boolValue()
-    );
+    printf("\t\t\t-> Value of 1st element stored stored: %s\n\t\t\t-> The value '%s' is '%s'\n", 
+        *(char**)bool_strings->value, strings_array[0], bool_strings->boolValue());
 
     printf("\t\t<-Wrong strings array->\n");
     bool_strings->value = wrong_strings;
-    printf(
-        "\t\t\t-> Value of 1st element stored stored: %s\n\t\t\t-> The value '%s' is '%s'\n", 
-        *(char**)bool_strings->value, wrong_strings[0], bool_strings->boolValue()
-    );
+    printf("\t\t\t-> Value of 1st element stored stored: %s\n\t\t\t-> The value '%s' is '%s'\n", 
+        *(char**)bool_strings->value, wrong_strings[0], bool_strings->boolValue());
 
     Boolean_type *bool_numbers = Boolean_maker(number_array, BOOLEAN_VALUE_TYPE_ARRAY);
     printf("\t\t<-Right numbers array->\n");
-    printf(
-        "\t\t\t-> Value of 1st element stored stored: %d\n\t\t\t-> The value '%d' is '%s'\n", 
-        **(int**)bool_numbers->value, *number_array[0], bool_numbers->boolValue()
-    );
+    printf("\t\t\t-> Value of 1st element stored stored: %d\n\t\t\t-> The value '%d' is '%s'\n", 
+        **(int**)bool_numbers->value, *number_array[0], bool_numbers->boolValue());
 
     printf("\t\t<-Wrong numbers array->\n");
     bool_numbers->value = wrong_numbers;
@@ -117,10 +109,11 @@ void testArray(){
 }
 
 // MAIN FUNCTION
-int main(){
-    // testString();
-    // testNumber();
-    // testCharacter();
+int main(void)
+{
+    /*testString();*/
+    /*testNumber();*/
+    /*testCharacter();*/
     testArray();
     return 0;
 }
