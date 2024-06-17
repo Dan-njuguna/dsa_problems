@@ -55,5 +55,5 @@ The project is structured in such a way that each folder has its own data type, 
 
 ### Note
 
-> This project is mainly for experimentation and not a strong dislike on how one can choose to code their programs in C. Please take it as an opportunity taken to experiment and test the waters on C's data structures and types 
+> This project is mainly for experimental and not a conventional way to carry out your C code implementation to your programs. Please take it as an opportunity taken to experiment and test the waters on C's data structures and types 
 
