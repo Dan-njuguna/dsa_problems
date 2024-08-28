@@ -79,8 +79,8 @@ int main(void)
  
 /**
  * averageMarks - Function to calculate the average marks for students given
- *                their marks for each subject
- * @grades: 2D array for {subject_id, student_marks}
+ *      their marks for each subject
+ * @grades: 2D array for {subject_id, student_marks}.
  * @len0: Number of subjects
  * @len1: Number of student marks
  * Return: Average marks 1D array for their subjects  
