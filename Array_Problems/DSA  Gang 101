@@ -1,0 +1,14 @@
+Big O notation
+
+-  **Big O notation** is used to describe the complexity of an algorithm in terms of the input size
+- O(n):
+for every for loop, (1).
+- O(n ^ 2):
+for  every nested for loop (+ ^ 1)
+- Time: how long does it take to manipulate your data? Is there a shorter time which can be used to do the same task.
+- Space
+- Accesibility
+- Scalability
+
+O(n ^ 1) = O(n)
+O(n ^ 2) = O(n ^ 2)
