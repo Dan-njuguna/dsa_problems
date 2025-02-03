@@ -1,0 +1,26 @@
+from typing import List
+
+def getUniques(list1: List[int]) -> int:
+    '''function to get the unique elements of an integer list
+    
+    Args:
+        list1 (List) - list of integers
+    Return:
+        the sum of the unique elements
+    '''
+    result = {}
+    
+    for i in list1:
+        if i in result:
+            result[i] += 1
+        else:
+            result[i] = 1
+
+    sam = 0
+    for key, val in result:
+        if val == 1:
+            sam += key
+    
+    return sam
+
+print(getUniques([1, 2, 3, 4, 5]))
